@@ -1,11 +1,14 @@
-const isDevelopment = process.env.NODE_ENV === 'development';
+const isDevelopment = process.env.NODE_ENV !== 'production';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: isDevelopment ? 'development' : 'production',
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(t|j)sx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
@@ -41,16 +44,33 @@ module.exports = {
              }
            }
          ]
-       }
+       },
+       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: !isDevelopment }
+          }
+        ]
+      }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss']
+  },
+  output: {
+    filename: isDevelopment ? '[name].js' : '[name].[hash].js'
   },
   plugins: [
      new MiniCssExtractPlugin({
        filename: isDevelopment ? '[name].css' : '[name].[hash].css',
        chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
-     })
+     }),
+     new HtmlWebPackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
+    }),
+    new CleanWebpackPlugin()
   ]
 }

@@ -2,29 +2,44 @@
   "name": "all1map",
   "version": "1.0.0",
   "description": "Web project about ideas around interactive content on maps. ",
-  "main": "index.js",
+  "main": "index.tsx",
   "author": "Jose Alberto Garcia Guijarro",
   "license": "MIT",
   "repository": "github:jalbertogg/All1Map",
+  "keywords": [
+    "maps",
+    "ideas",
+    "data",
+    "visualisations"
+  ],
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.1",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    "react-hot-loader": "^4.12.20",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./webpack.config.js",
-    "build-watch": "webpack --watch --colors",
-    "start": "webpack-dev-server --progress"
+    "build": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --progress --colors --hot --config webpack.config.js"
   }
 }
