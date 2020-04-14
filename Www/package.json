@@ -36,6 +36,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
+    "lodash.template": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
