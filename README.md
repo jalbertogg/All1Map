@@ -2,4 +2,4 @@
 
 All1Map is a personal project made by [Jose Alberto García](https://www.linkedin.com/in/josealbertogarciaguijarro/) to share ideas of interactive content using `maps as the main content`.
 
-If you are a :heart: data or a maps this is your site :wink:
+If you :heart: data visualizations and maps this is your project :wink:
