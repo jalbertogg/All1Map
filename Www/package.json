@@ -2,7 +2,7 @@
   "name": "all1map",
   "version": "1.0.0",
   "description": "Web project about ideas around interactive content on maps. ",
-  "main": "index.tsx",
+  "main": "index.js",
   "author": "Jose Alberto Garcia Guijarro",
   "license": "MIT",
   "repository": "github:jalbertogg/All1Map",
@@ -36,6 +36,11 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@carbon/grid": "^10.10.1",
+    "carbon-components": "^10.11.1",
+    "carbon-components-react": "^7.11.1",
+    "carbon-icons": "^7.0.7",
+    "core-js": "^3.6.5",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
     "react": "^16.13.1",
