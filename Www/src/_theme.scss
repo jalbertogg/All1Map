@@ -1,0 +1,8 @@
+//Import carbon themes
+@import "@carbon/themes/scss/themes";
+
+// Import custom settings
+@import "./settings";
+
+//Import carbon theme mixin after settings
+@include carbon--theme();

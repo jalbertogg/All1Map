@@ -1,0 +1,32 @@
+@import "carbon-components/scss/globals/scss/_typography.scss";
+@import "../../_theme";
+
+
+.bx--article-card-vertical .bx--tile{
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: $layout-03;
+
+  .bx--article-card__img{
+    flex: 1 1 0;
+  }
+  .bx--article-card__details{
+    flex: 2 1 0;
+    padding: $spacing-05;
+
+    .bx--article-card-title{
+      @include carbon--type-style("productive-heading-03");
+      margin-bottom: $spacing-05;
+    }
+    .bx--article-card-subtitle{
+      @include carbon--type-style("body-long-01");
+      color: $text-02;
+      margin-bottom: $spacing-09;
+    }
+    .bx--article-card-author-date{
+      @include carbon--type-style("caption-01");
+      color: $text-02;
+    }
+  }
+}

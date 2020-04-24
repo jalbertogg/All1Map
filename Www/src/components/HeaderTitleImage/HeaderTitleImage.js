@@ -1,15 +1,27 @@
-import styles from './_styles'
 import React from 'react'
-import { hot } from 'react-hot-loader/root'
-import Image from '../../images/rosa'
+import PropTypes from 'prop-types'
+import { hot } from 'react-hot-loader/root';
+import './styles'
 
-function HeaderTitleImage() {
+const HeaderTitleImage = (props) => {
   return (
-    <div className='header-title-image'>
-      <h1>All1Map</h1>
-      <img src={Image} alt="Rosa Malagueña" height="200" />
+    <div className='bx--row header-tile-image'>
+      <div className='bx--col-sm-4 bx--col-md-4 bx--col-lg-7 bx--col-xlg-6'>
+        <h1 className='title'>{props.title}</h1>
+        <p className='subtitle'>{props.subtitle}</p>
+      </div>
+      <div className='bx--col-sm-4 bx--col-md-4 bx--col-lg-8 bx--offset-lg-1 bx--offset-xlg-2 bx--offset-max-2 bx--aspect-ratio bx--aspect-ratio--16x9'>
+        <img className='bx--aspect-ratio--object image' src={props.imgSrc} alt={props.imgAlt} />
+      </div>
     </div>
   )
 }
 
-export default hot(HeaderTitleImage)
+HeaderTitleImage.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  imgSrc: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string.isRequired
+}
+
+export default hot(HeaderTitleImage);

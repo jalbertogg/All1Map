@@ -1,25 +1,20 @@
-import './global'
-import './index-page'
+import './styles'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './js/polyfills'
-import { Content } from "carbon-components-react/es/components/UIShell";
 import GlobalHeader from './components/GlobalHeader'
-import HeaderTitleImage from './components/HeaderTitleImage'
+import { Content } from "carbon-components-react/es/components/UIShell";
+import BigFooter from './components/BigFooter'
+import App from './home'
 
-export class Home extends React.Component {
-  render(){
-    return ([
+const page = [
       <GlobalHeader />,
-      <div className="bx--grid bx--grid--full-width landing-page">
-        <HeaderTitleImage />
-      </div>
-    ]);
-  }
-};
+      <App />,
+      <BigFooter />
+    ];
 
 
 ReactDOM.render(
-  <Home />,
+  page,
   document.getElementById('root')
 )

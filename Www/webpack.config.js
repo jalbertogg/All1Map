@@ -26,7 +26,7 @@ module.exports = {
            {
              loader: 'sass-loader',
              options: {
-               sourceMap: isDevelopment
+               sourceMap: isDevelopment,
              }
            }
          ]
@@ -85,7 +85,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.gif', '.png', '.jpg', '.jpeg', '.svg']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.gif', '.png', '.jpg', '.jpeg', '.svg'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
   },
   output: {
     filename: isDevelopment ? '[name].js' : '[name].[hash].js'
