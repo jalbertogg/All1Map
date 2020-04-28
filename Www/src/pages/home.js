@@ -1,10 +1,10 @@
 import './home-styles'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
-import HeaderTitleImage from './components/HeaderTitleImage'
-import FeaturedTiles from './components/FeaturedTiles'
-import WorlGlobe from './images/world_globe'
-import Cover from './images/rosa'
+import HeaderTitleImage from '../components/HeaderTitleImage'
+import FeaturedTiles from '../components/FeaturedTiles'
+import WorlGlobe from '../images/world_globe'
+import Cover from '../images/rosa'
 
 const App = () => {
   return (

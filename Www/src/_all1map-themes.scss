@@ -1,0 +1,19 @@
+//Import carbon themes
+@import "@carbon/themes/scss/themes";
+
+//All1Map Dark theme
+$all1map--theme--dark: map-merge(
+  $carbon--theme--g100,
+  (
+    interactive-01: hotpink,
+  )
+) !default;
+
+
+//All1Map Light theme
+$all1map--theme--light: map-merge(
+  $carbon--theme--white,
+  (
+    interactive-01: hotpink,
+  )
+) !default;
