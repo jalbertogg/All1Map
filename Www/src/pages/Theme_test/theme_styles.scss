@@ -1,5 +1,6 @@
-.theme {
+@import "../../all1map-themes";
 
+.theme {
   & > * {
     margin: 24px;
   }
@@ -14,4 +15,18 @@
     -webkit-appearance: none;
   }
 
+}
+
+.dark-theme{
+  @include carbon--theme($all1map--theme--dark, true);
+  @include carbon--theme($all1map--theme--dark){
+    background-color: $ui-background;
+  }
+}
+
+.light-theme{
+  @include carbon--theme($all1map--theme--light, true);
+  @include carbon--theme($all1map--theme--light){
+    background-color: $ui-background;
+  }
 }

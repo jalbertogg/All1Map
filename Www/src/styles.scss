@@ -1,5 +1,8 @@
 // Import custom settings
 @import "./settings";
 
+// Import @carbon global styles
+@import "carbon-components/scss/globals/scss/styles.scss";
+
 // Import your custom styles
 @import "./global";

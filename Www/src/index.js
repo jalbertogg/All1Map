@@ -7,7 +7,6 @@ import { Content } from "carbon-components-react/es/components/UIShell";
 import BigFooter from './components/BigFooter'
 // import App from './pages/home'
 import App from './pages/Theme_test/theme_page'
-import "./app-theme"
 
 const page = [
       <GlobalHeader />,

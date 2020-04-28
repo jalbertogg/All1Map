@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from 'react';
 import { hot } from 'react-hot-loader/root'
 import './theme_styles'
 import {
@@ -18,14 +18,25 @@ import {
   Tabs,
   Tab
   } from "carbon-components-react"
-import {
-  white,
-  g90 
-  } from '@carbon/themes';
+
 
 const App = () => {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    var element = document.getElementById("page");
+    console.log("Toggle Theme");
+    if(theme === 'light'){
+      element.classList.replace("light-theme","dark-theme");
+      setTheme('dark');
+    }else{
+      element.classList.replace("dark-theme","light-theme");
+      setTheme('light');
+    }
+  }
+
   return (
-    <div className='bx--grid page theme'>
+    <div id='page' className='bx--grid page theme light-theme'>
       <Tabs>
         <Tab
           href="#"
@@ -75,7 +86,7 @@ const App = () => {
           disabled={false}
           iconDescription="Button icon"
           kind="primary"
-          onClick={function noRefCheck(){}}
+          onClick={toggleTheme}
           onFocus={function noRefCheck(){}}
           renderIcon={undefined}
           size="default"
