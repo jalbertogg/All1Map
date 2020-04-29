@@ -1,4 +1,5 @@
-import React from "react";
+import './styles'
+import React, { useState } from 'react';
 import {
   HeaderContainer,
   Header,
@@ -16,7 +17,21 @@ import {
 
 import Light20 from "@carbon/icons-react/lib/light/20";
 
-const GlobalHeader = () => (
+const GlobalHeader = () => {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    var element = document.getElementById("root");
+    console.log("Toggle Theme");
+    if(theme === 'light'){
+      element.classList.replace("light-theme","dark-theme");
+      setTheme('dark');
+    }else{
+      element.classList.replace("dark-theme","light-theme");
+      setTheme('light');
+    }
+  }
+  return (
   <HeaderContainer
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
           <>
@@ -36,7 +51,7 @@ const GlobalHeader = () => (
                 <HeaderMenuItem href="/contact">Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
-                <HeaderGlobalAction aria-label="theme">
+                <HeaderGlobalAction aria-label="theme" onClick={toggleTheme}>
                   <Light20 />
                 </HeaderGlobalAction>
               </HeaderGlobalBar>
@@ -56,5 +71,6 @@ const GlobalHeader = () => (
           </>
         )}
       />
-);
+    )
+};
 export default GlobalHeader;

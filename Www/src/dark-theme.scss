@@ -1,9 +1,0 @@
-@import "./all1map-themes";
-
-//Import carbon white theme
-@import "@carbon/themes/scss/themes";
-$carbon--theme: $all1map--theme--dark;
-@include carbon--theme();
-
-// Import @carbon global styles
-@import "carbon-components/scss/globals/scss/styles.scss";

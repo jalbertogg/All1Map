@@ -1,5 +1,23 @@
-@import "@carbon/themes/scss/themes";
+@import "./all1map-themes";
 
-.page{
+.page {
   margin-top: $layout-04;
+}
+
+.dark-theme {
+  @include carbon--theme($all1map--theme--dark){
+    background-color: $ui-background;
+  }
+  & * {
+    @include carbon--theme($all1map--theme--dark, true);
+  }
+}
+
+.light-theme {
+  @include carbon--theme($all1map--theme--light){
+    background-color: $ui-background;
+  }
+  & * {
+    @include carbon--theme($all1map--theme--light, true);
+  }
 }

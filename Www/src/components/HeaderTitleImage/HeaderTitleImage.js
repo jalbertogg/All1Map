@@ -5,7 +5,7 @@ import './styles'
 
 const HeaderTitleImage = (props) => {
   return (
-    <div className='bx--row header-tile-image'>
+    <div className='bx--row header-title-image'>
       <div className='bx--col-sm-4 bx--col-md-4 bx--col-lg-7 bx--col-xlg-6'>
         <h1 className='title'>{props.title}</h1>
         <p className='subtitle'>{props.subtitle}</p>

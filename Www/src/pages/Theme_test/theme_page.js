@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './theme_styles'
 import {
@@ -21,22 +21,8 @@ import {
 
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    var element = document.getElementById("page");
-    console.log("Toggle Theme");
-    if(theme === 'light'){
-      element.classList.replace("light-theme","dark-theme");
-      setTheme('dark');
-    }else{
-      element.classList.replace("dark-theme","light-theme");
-      setTheme('light');
-    }
-  }
-
   return (
-    <div id='page' className='bx--grid page theme light-theme'>
+    <div id='page' className='bx--grid page theme'>
       <Tabs>
         <Tab
           href="#"
@@ -86,7 +72,7 @@ const App = () => {
           disabled={false}
           iconDescription="Button icon"
           kind="primary"
-          onClick={toggleTheme}
+          onClick={function noRefCheck(){}}
           onFocus={function noRefCheck(){}}
           renderIcon={undefined}
           size="default"

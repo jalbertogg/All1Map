@@ -1,36 +1,54 @@
-@import "carbon-components/scss/globals/scss/_vars";
+@import "../../all1map-themes";
 @import "carbon-components/scss/globals/scss/_typography.scss";
 
-.header-tile-image{
-  padding-top: $layout-03;
+@mixin header-title-image{
+  .header-title-image{
+    padding-top: $layout-03;
 
-  .title{
-    @include carbon--type-style("productive-heading-07");
-    @include carbon--breakpoint("sm"){
-      text-align: center;
+    .title{
+      @include carbon--type-style("productive-heading-07");
+      color: $text-01;
+
+      @include carbon--breakpoint("sm"){
+        text-align: center;
+      }
+      @include carbon--breakpoint("md"){
+        margin-top: $spacing-03;
+        text-align: left;
+      }
+      @include carbon--breakpoint("lg"){
+        margin-top: $spacing-07;
+      }
+      @include carbon--breakpoint("xlg"){
+        margin-top: $spacing-09;
+      }
     }
-    @include carbon--breakpoint("md"){
-      margin-top: $spacing-03;
-      text-align: left;
-    }
-    @include carbon--breakpoint("lg"){
-      margin-top: $spacing-07;
-    }
-    @include carbon--breakpoint("xlg"){
-      margin-top: $spacing-09;
+
+    .subtitle {
+      @include carbon--type-style("body-long-02");
+      color: $text-01;
+      
+      @include carbon--breakpoint("sm"){
+        margin-top: $spacing-03;
+        margin-bottom: $spacing-09;
+        text-align: center;
+      }
+      @include carbon--breakpoint("md"){
+        margin-top: $spacing-06;
+        text-align: left;
+      }
     }
   }
+}
 
-  .subtitle {
-    @include carbon--type-style("body-long-02");
-    @include carbon--breakpoint("sm"){
-      margin-top: $spacing-03;
-      margin-bottom: $spacing-09;
-      text-align: center;
-    }
-    @include carbon--breakpoint("md"){
-      margin-top: $spacing-06;
-      text-align: left;
-    }
+.dark-theme {
+  @include carbon--theme($all1map--theme--dark){
+    @include header-title-image();
+  }
+}
+
+.light-theme {
+  @include carbon--theme($all1map--theme--light){
+    @include header-title-image();
   }
 }

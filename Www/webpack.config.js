@@ -75,9 +75,12 @@ module.exports = {
               gifsicle: {
                 interlaced: false
               },
-              webp: {
-                quality: 75
-              }
+              //WEBP is just supported by Chrome and there is
+              // a bug with image-webpack-loader when setting it to false
+              // webp: {
+              //   enabled: false,
+              //   quality: 75
+              // }
             }
           }
         ]
