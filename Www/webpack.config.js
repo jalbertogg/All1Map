@@ -2,6 +2,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
@@ -24,6 +25,12 @@ module.exports = {
              }
            },
            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [autoprefixer()]
+              }
+            },
+           {
              loader: 'sass-loader',
              options: {
                sourceMap: isDevelopment,
@@ -37,6 +44,12 @@ module.exports = {
          loader: [
            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
            'css-loader',
+           {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [autoprefixer()]
+              }
+            },
            {
              loader: 'sass-loader',
              options: {

@@ -1,5 +1,6 @@
 import './styles'
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   HeaderContainer,
   Header,
@@ -14,24 +15,12 @@ import {
   HeaderSideNavItems,
   SideNavItems,
 } from "carbon-components-react/es/components/UIShell";
+import { Content } from "carbon-components-react/es/components/UIShell";
+import ToggleTheme from "../ToggleTheme"
 
-import Light20 from "@carbon/icons-react/lib/light/20";
+const GlobalHeader = (props) => {
 
-const GlobalHeader = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    var element = document.getElementById("root");
-    console.log("Toggle Theme");
-    if(theme === 'light'){
-      element.classList.replace("light-theme","dark-theme");
-      setTheme('dark');
-    }else{
-      element.classList.replace("dark-theme","light-theme");
-      setTheme('light');
-    }
-  }
-  return (
+  return ([
   <HeaderContainer
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
           <>
@@ -51,8 +40,8 @@ const GlobalHeader = () => {
                 <HeaderMenuItem href="/contact">Contact</HeaderMenuItem>
               </HeaderNavigation>
               <HeaderGlobalBar>
-                <HeaderGlobalAction aria-label="theme" onClick={toggleTheme}>
-                  <Light20 />
+                <HeaderGlobalAction
+                  aria-label="Search">
                 </HeaderGlobalAction>
               </HeaderGlobalBar>
               <SideNav
@@ -70,7 +59,14 @@ const GlobalHeader = () => {
             </Header>
           </>
         )}
-      />
-    )
+      />,
+  <ToggleTheme theme={props.theme} toggleTheme={props.toggleTheme}/>
+  ])
 };
+
+GlobalHeader.propTypes = {
+  theme: PropTypes.oneOf(['light', 'dark']).isRequired,
+  toggleTheme: PropTypes.func.isRequired,
+}
+
 export default GlobalHeader;

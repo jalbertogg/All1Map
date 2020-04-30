@@ -2,20 +2,29 @@ import "./styles"
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './js/polyfills'
+import { useTheme } from "./js/useTheme";
 import GlobalHeader from './components/GlobalHeader'
-import { Content } from "carbon-components-react/es/components/UIShell";
 import BigFooter from './components/BigFooter'
 import App from './pages/home'
 // import App from './pages/Theme_test/theme_page'
 
-const page = [
-      <GlobalHeader />,
-      <App />,
-      <BigFooter />
-    ];
+const Page = () => {
+  const [theme, toggleTheme, componentMounted] = useTheme();
 
+  if(!componentMounted){
+    return <div />
+  }
+
+  return ([
+      <GlobalHeader theme={theme} toggleTheme={toggleTheme}/>,
+      <App />,
+      <button onClick={toggleTheme}>TOGGLE THEME</button>,
+      <BigFooter />
+  ]);
+
+}
 
 ReactDOM.render(
-  page,
+  <Page />,
   document.getElementById('root')
 )

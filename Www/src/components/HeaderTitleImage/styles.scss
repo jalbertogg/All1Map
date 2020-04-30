@@ -8,6 +8,7 @@
     .title{
       @include carbon--type-style("productive-heading-07");
       color: $text-01;
+      user-select: none;
 
       @include carbon--breakpoint("sm"){
         text-align: center;
@@ -27,7 +28,8 @@
     .subtitle {
       @include carbon--type-style("body-long-02");
       color: $text-01;
-      
+      user-select: none;
+
       @include carbon--breakpoint("sm"){
         margin-top: $spacing-03;
         margin-bottom: $spacing-09;
