@@ -1,4 +1,5 @@
 import "./styles"
+import "./global"
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './js/polyfills'
@@ -18,7 +19,6 @@ const Page = () => {
   return ([
       <GlobalHeader theme={theme} toggleTheme={toggleTheme}/>,
       <App />,
-      <button onClick={toggleTheme}>TOGGLE THEME</button>,
       <BigFooter />
   ]);
 

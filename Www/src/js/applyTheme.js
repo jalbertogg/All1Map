@@ -8,5 +8,4 @@ export const applyTheme = (theme) => {
     element.classList.remove("light-theme");
     element.classList.add("dark-theme");
   }
-  console.log("enter")
 };
