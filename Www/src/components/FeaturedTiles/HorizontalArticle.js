@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader/root';
-import { ClickableTile } from "carbon-components-react/es/components/tile";
+import { ClickableTile } from "carbon-components-react/es/components/Tile";
 import './horizontal-article_styles'
 
 const HorizontalArticle = (props) => {

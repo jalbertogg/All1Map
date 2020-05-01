@@ -1,0 +1,27 @@
+@import "../../all1map-themes";
+
+.bx--side-nav__items .bx--header__menu-item {
+  @include carbon--theme($all1map--theme--light){
+    &.active{
+      border: none;
+      &::after{
+        content: none !important;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 4px;
+        background-color: $interactive-01;
+      }
+      &:focus::before{
+        width: 2px;
+      }
+    }
+    &:focus{
+      outline-color: $interactive-01 !important;
+    }
+  }
+}

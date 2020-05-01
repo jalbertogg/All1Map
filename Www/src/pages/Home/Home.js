@@ -1,14 +1,19 @@
-import './home-styles'
+import './styles'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
-import HeaderTitleImage from '../components/HeaderTitleImage'
-import FeaturedTiles from '../components/FeaturedTiles'
-import WorlGlobe from '../images/world_globe'
-import Cover from '../images/rosa'
+import BigFooter from '../../components/BigFooter'
+import HeaderTitleImage from '../../components/HeaderTitleImage'
+import FeaturedTiles from '../../components/FeaturedTiles'
+import WorlGlobe from '../../images/world_globe'
+import Cover from '../../images/rosa'
+import { Link } from 'react-router-dom';
 
-const App = () => {
+const Home = () => {
+
+
   return (
-    <div className='bx--grid page'>
+    <>
+    <div className='bx--grid'>
       <HeaderTitleImage
         title='All1Map'
         subtitle='A catalog of useful tools to inspire, discover, and enjoy with real data visualisations and maps'
@@ -39,7 +44,9 @@ const App = () => {
         ]}
       />
     </div>
+    <BigFooter />
+    </>
   );
 };
 
-export default hot(App);
+export default hot(Home);

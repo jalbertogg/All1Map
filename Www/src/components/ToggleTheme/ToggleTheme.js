@@ -15,7 +15,7 @@ const ToggleTheme = (props) => {
 
   return(
       <HeaderGlobalAction
-        aria-label="Search"
+        aria-label="toggle theme"
         className="toggle-theme-btn"
         onClick={props.toggleTheme}>
         <Light20 className={classLightIcon}/>

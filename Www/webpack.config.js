@@ -119,5 +119,10 @@ module.exports = {
       filename: './index.html'
     }),
     new CleanWebpackPlugin()
-  ]
+  ],
+  devServer: {
+   historyApiFallback: true,
+   contentBase: './',
+   hot: true
+  },
 }

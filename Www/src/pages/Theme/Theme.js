@@ -1,6 +1,7 @@
+import './styles'
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './theme_styles'
+import BigFooter from '../../components/BigFooter'
 import {
   Form,
   FormGroup,
@@ -19,10 +20,9 @@ import {
   Tab
   } from "carbon-components-react"
 
-
-const App = () => {
-  return (
-    <div id='page' className='bx--grid page theme'>
+const Theme = () => {
+  return ([
+    <div className='bx--grid'>
       <Tabs>
         <Tab
           href="#"
@@ -249,8 +249,9 @@ const App = () => {
         Submit
       </Button>
     </Form>
-  </div>
-  )
+  </div>,
+  <BigFooter />
+  ]);
 };
 
-export default hot(App);
+export default hot(Theme);
