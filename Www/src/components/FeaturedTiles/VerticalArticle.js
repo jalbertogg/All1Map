@@ -28,7 +28,10 @@ VerticalArticle.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   authorDate: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string
+  coverText: PropTypes.string.isRequired,
+  twitter: PropTypes.bool,
+  maps: PropTypes.bool,
+  charts: PropTypes.bool
 }
 
 export default hot(VerticalArticle);

@@ -14,7 +14,10 @@ const FeaturedTiles = (props) => {
             title={article.title}
             subtitle={article.subtitle}
             authorDate={article.authorDate}
-            imgSrc={article.imgSrc}
+            coverText= {article.coverText}
+            twitter= {article.twitter}
+            maps= {article.maps}
+            charts= {article.charts}
           />
         </div>
       );
@@ -35,7 +38,10 @@ const FeaturedTiles = (props) => {
             title={article.title}
             subtitle={article.subtitle}
             authorDate={article.authorDate}
-            imgSrc={article.imgSrc}
+            coverText= {article.coverText}
+            twitter= {article.twitter}
+            maps= {article.maps}
+            charts= {article.charts}
           />
         </div>
       );

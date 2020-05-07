@@ -16,6 +16,12 @@
 
     .bx--article-card__img{
       flex: 1 1 0;
+      .cover span{
+        @include carbon--type-style("productive-heading-05");
+        font-weight: bold;
+        opacity: 0.25;
+        background-blend-mode: multiply;
+      }
     }
     .bx--article-card__details{
       flex: 2 1 0;
@@ -46,11 +52,23 @@
 .dark-theme {
   @include carbon--theme($all1map--theme--dark){
     @include article();
+    .cover{
+      background-image: linear-gradient(to right,$all1map-purple-90,transparent);
+      span{
+        color: $all1map-purple-10;
+      }
+    }
   }
 }
 
 .light-theme {
   @include carbon--theme($all1map--theme--light){
     @include article();
+    .cover{
+      background-image: linear-gradient(to right,$all1map-purple-80,transparent);
+      span{
+        color: $all1map-purple-100;
+      }
+    }
   }
 }
