@@ -22,7 +22,7 @@ import {
 
 const Theme = () => {
   return ([
-    <div className='bx--grid'>
+    <div className='bx--grid theme'>
       <Tabs>
         <Tab
           href="#"
@@ -125,21 +125,6 @@ const Theme = () => {
         type="button"
         >
         Ghost Button
-        </Button>
-
-        <Button
-        className="some-class"
-        disabled={false}
-        iconDescription="Button icon"
-        kind="danger--primary"
-        onClick={function noRefCheck(){}}
-        onFocus={function noRefCheck(){}}
-        renderIcon={undefined}
-        size="default"
-        tabIndex={0}
-        type="button"
-        >
-        Danger-Primary Button
         </Button>
 
         <Button
