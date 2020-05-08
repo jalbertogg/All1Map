@@ -5,9 +5,11 @@ import HorizontalArticle from './HorizontalArticle'
 import VerticalArticle from './VerticalArticle'
 
 const FeaturedTiles = (props) => {
+  var articles;
+
   if (props.align === 'horizontal'){
 
-    const horizontalArticles = props.articles.map( (article,key) => {
+    articles = props.articles.map( (article,key) => {
       return(
         <div className='bx--col-sm-4' key={key}>
           <HorizontalArticle
@@ -23,15 +25,9 @@ const FeaturedTiles = (props) => {
       );
     });
 
-    return (
-      <div className='bx--row bx--articles'>
-        {horizontalArticles}
-      </div>
-    );
+  } else{
 
-  } else if (props.align === 'vertical'){
-
-    const verticalArticles = props.articles.map( (article,key) => {
+    articles = props.articles.map( (article,key) => {
       return(
         <div className='bx--col-sm-4 bx--col-md' key={key}>
           <VerticalArticle
@@ -46,15 +42,15 @@ const FeaturedTiles = (props) => {
         </div>
       );
     });
-
-    return (
-      <div className='bx--row bx--articles'>
-        {verticalArticles}
-      </div>
-    );
-  } else {
-    return (null);
   }
+
+  return (
+    <div className='bx--grid bx--articles'>
+      <div className='bx--row'>
+        {articles}
+      </div>
+    </div>
+  )
 };
 
 FeaturedTiles.propTypes = {

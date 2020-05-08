@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader/root';
 import { ClickableTile } from "carbon-components-react/es/components/Tile";
 import './horizontal-article_styles';
-import Twitter20 from "@carbon/icons-react/lib/light/20";
-import Activity20 from "@carbon/icons-react/lib/activity/20";
-import Location20 from "@carbon/icons-react/lib/map/20";
+import Twitter20 from "../Icons/TwitterIcon/20";
+import Report20 from "@carbon/icons-react/lib/report--data/20";
+import Earth20 from "@carbon/icons-react/lib/earth--filled/20";
 
 const HorizontalArticle = (props) => {
 
   var icons = [];
-  if (props.twitter) icons.push(<Twitter20 />);
-  if (props.maps) icons.push(<Location20 />);
-  if (props.charts) icons.push(<Activity20 />);
+  if (props.twitter) icons.push(<Twitter20 aria-label="twitter data" title="It contains twitter data"/>);
+  if (props.maps) icons.push(<Earth20 aria-label="maps data" title="It contains maps data"/>);
+  if (props.charts) icons.push(<Report20 aria-label="data visualisations" title="It contains data visualisations"/>);
 
   return (
     <div className='bx--article-card-horizontal'>

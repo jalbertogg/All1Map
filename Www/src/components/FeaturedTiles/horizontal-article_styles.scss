@@ -16,11 +16,25 @@
 
     .bx--article-card__img{
       flex: 1 1 0;
-      .cover span{
-        @include carbon--type-style("productive-heading-05");
-        font-weight: bold;
-        opacity: 0.25;
-        background-blend-mode: multiply;
+      .cover {
+        padding: $spacing-06;
+        text-align: center;
+
+        span{
+          @include carbon--type-style("productive-heading-05");
+          display: block;
+          font-weight: bold;
+          mix-blend-mode: soft-light;
+          color: $text-01;
+          margin-bottom: $spacing-03;
+          margin-top: $spacing-06;
+        }
+
+        svg{
+          fill: white;
+          margin: 0 $spacing-02;
+        }
+
       }
     }
     .bx--article-card__details{
@@ -52,10 +66,12 @@
 .dark-theme {
   @include carbon--theme($all1map--theme--dark){
     @include article();
-    .cover{
-      background-image: linear-gradient(to right,$all1map-purple-90,transparent);
-      span{
-        color: $all1map-purple-10;
+    .bx--article-card-horizontal .cover{
+      @include carbon--breakpoint("sm"){
+        background-image: linear-gradient($all1map-purple-90,transparent);
+      }
+      @include carbon--breakpoint("md"){
+        background-image: linear-gradient(to right,$all1map-purple-90,transparent);
       }
     }
   }
@@ -64,10 +80,12 @@
 .light-theme {
   @include carbon--theme($all1map--theme--light){
     @include article();
-    .cover{
-      background-image: linear-gradient(to right,$all1map-purple-80,transparent);
-      span{
-        color: $all1map-purple-100;
+    .bx--article-card-horizontal .cover{
+      @include carbon--breakpoint("sm"){
+        background-image: linear-gradient($all1map-purple-80,transparent);
+      }
+      @include carbon--breakpoint("md"){
+        background-image: linear-gradient(to right,$all1map-purple-80,transparent);
       }
     }
   }

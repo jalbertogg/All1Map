@@ -10,6 +10,38 @@
 
     .bx--article-card__img{
       flex: 1 1 0;
+
+      .cover {
+        padding: $spacing-06;
+        text-align: center;
+
+        span{
+          @include carbon--type-style("productive-heading-05");
+          display: block;
+          font-weight: bold;
+          mix-blend-mode: soft-light;
+          color: $text-01;
+          margin-bottom: $spacing-03;
+          @include carbon--breakpoint("sm"){
+            margin-top: $spacing-06;
+          }
+          @include carbon--breakpoint("md"){
+            margin-top: $spacing-03;
+          }
+          @include carbon--breakpoint("lg"){
+            margin-top: $spacing-06;
+          }
+          @include carbon--breakpoint("xlg"){
+            margin-top: $spacing-09;
+          }
+        }
+
+        svg{
+          fill: white;
+          margin: 0 $spacing-02;
+        }
+
+      }
     }
     .bx--article-card__details{
       flex: 2 1 0;
@@ -35,11 +67,17 @@
 .dark-theme {
   @include carbon--theme($all1map--theme--dark){
     @include article();
+    .bx--article-card-vertical .cover{
+      background-image: linear-gradient(to bottom,$all1map-purple-90,transparent);
+    }
   }
 }
 
 .light-theme {
   @include carbon--theme($all1map--theme--light){
     @include article();
+    .bx--article-card-vertical .cover{
+      background-image: linear-gradient(to bottom,$all1map-purple-80,transparent);
+    }
   }
 }

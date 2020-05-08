@@ -1,29 +1,9 @@
 @import "../../all1map-themes";
 @import "carbon-components/scss/globals/scss/_typography.scss";
 
-@mixin header-title-image{
-
-  .header-title-image{
-
-    @include carbon--breakpoint("sm"){
-      .header-text{
-        background-color: $all1map-purple-80;
-        padding-top: $layout-03;
-      }
-      .world_globe{
-        background-color: $all1map-purple-80;
-        clip-path: url(#home-path-md);
-      }
-    }
-    @include carbon--breakpoint("md"){
-      padding-bottom: $layout-05;
-      background-color: $all1map-purple-80;
-      padding-bottom: $layout-04;
-      clip-path: url(#home-path-md);
-    }
-    @include carbon--breakpoint("lg"){
-      padding-bottom: 0;
-    }
+@mixin title-image{
+  .title-image{
+    padding-top: $layout-03;
 
     .title{
       @include carbon--type-style("productive-heading-07");
@@ -65,12 +45,12 @@
 
 .dark-theme {
   @include carbon--theme($all1map--theme--dark){
-    @include header-title-image();
+    @include title-image();
   }
 }
 
 .light-theme {
   @include carbon--theme($all1map--theme--light){
-    @include header-title-image();
+    @include title-image();
   }
 }

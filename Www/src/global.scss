@@ -5,6 +5,7 @@ main {
   margin-top: $layout-04;
 }
 
+//TOGGLE THEME
 .dark-theme main{
   @include carbon--theme($all1map--theme--dark){
     background-color: $ui-background;
@@ -21,4 +22,14 @@ main {
   * {
   @include carbon--theme($all1map--theme--light, true);
   }
+}
+
+//fix border focus on tiles from outline to border -> issue with background colors on inner divs
+.bx--tile--clickable:focus{
+  outline-offset: 0;
+}
+
+//re-colour the header
+.bx--header{
+  background-color: $all1map-purple-80;
 }
