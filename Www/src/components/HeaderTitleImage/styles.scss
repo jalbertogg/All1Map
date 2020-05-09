@@ -1,76 +1,133 @@
-@import "../../all1map-themes";
+@import "../../theme";
 @import "carbon-components/scss/globals/scss/_typography.scss";
 
-@mixin header-title-image{
+.header-title-image{
 
-  .header-title-image{
-
+  .linechart{
+    z-index: -1;
+    right: 0;
+    path{
+      fill: none;
+      stroke-width: 2;
+    }
     @include carbon--breakpoint("sm"){
-      .header-text{
-        background-color: $all1map-purple-80;
-        padding-top: $layout-03;
-      }
-      .world_globe{
-        background-color: $all1map-purple-80;
-        clip-path: url(#home-path-md);
-      }
+      position: absolute;
+      top: 200px;
     }
     @include carbon--breakpoint("md"){
-      padding-bottom: $layout-05;
-      background-color: $all1map-purple-80;
-      padding-bottom: $layout-04;
+      top: 0;
+    }
+  }
+
+  @include carbon--breakpoint("sm"){
+    .header-text{
+      background-color: $key-color-80;
+      padding-top: $layout-03;
+    }
+    .world_container{
+      filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.5));
+    }
+    .world_globe{
+      background-color: $key-color-80;
+      clip-path: url(#home-path-sm);
+      img{
+        height: 355px;
+      }
+    }
+  }
+  @include carbon--breakpoint("md"){
+    .banner-container{
+      filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.5));
+    }
+    .banner{
       clip-path: url(#home-path-md);
+      background-color: $key-color-80;
+      padding-bottom: $layout-03;
     }
-    @include carbon--breakpoint("lg"){
-      padding-bottom: 0;
+    .world_container{
+      filter: none;
     }
+    .world_globe{
+      clip-path: none;
+      img{
+        height: 355px;
+      }
+    }
+  }
+  @include carbon--breakpoint("lg"){
+    .banner{
+      clip-path: url(#home-path-lg);
+      padding-bottom: $layout-06;
+    }
+    .world_globe{
+      img{
+        height: 400px;
+      }
+    }
+  }
 
-    .title{
-      @include carbon--type-style("productive-heading-07");
+  .title{
+    @include carbon--type-style("productive-heading-07");
+    @include carbon--theme($theme--dark){
       color: $text-01;
-      user-select: none;
-
-      @include carbon--breakpoint("sm"){
-        text-align: center;
-      }
-      @include carbon--breakpoint("md"){
-        margin-top: $spacing-03;
-        text-align: left;
-      }
-      @include carbon--breakpoint("lg"){
-        margin-top: $spacing-07;
-      }
-      @include carbon--breakpoint("xlg"){
-        margin-top: $spacing-09;
-      }
     }
+    user-select: none;
 
-    .subtitle {
-      @include carbon--type-style("body-long-02");
+    @include carbon--breakpoint("sm"){
+      margin-top: $spacing-06;
+      text-align: center;
+    }
+    @include carbon--breakpoint("md"){
+      margin-top: $spacing-06;
+      text-align: left;
+    }
+    @include carbon--breakpoint("xlg"){
+      margin-top: $spacing-07;
+    }
+  }
+
+  .subtitle {
+    @include carbon--type-style("body-long-02");
+    @include carbon--theme($theme--dark){
       color: $text-01;
-      user-select: none;
+    }
+    user-select: none;
 
-      @include carbon--breakpoint("sm"){
-        margin-top: $spacing-03;
-        margin-bottom: $spacing-09;
-        text-align: center;
-      }
-      @include carbon--breakpoint("md"){
-        margin-top: $spacing-06;
-        text-align: left;
-      }
+    @include carbon--breakpoint("sm"){
+      margin-top: $spacing-03;
+      margin-bottom: $spacing-09;
+      text-align: center;
+    }
+    @include carbon--breakpoint("md"){
+      margin-top: $spacing-06;
+      text-align: left;
     }
   }
 }
 
-.dark-theme {
-  @include carbon--theme($all1map--theme--dark){
-    @include header-title-image();
+.dark-theme{
+  .linechart {
+    #Home_line_1{
+      stroke: $all1map-yellow-40;
+    }
+    #Home_line_2{
+      stroke: $all1map-cyan-40;
+    }
+    #Home_line_3{
+      stroke: $all1map-pink-40;
+    }
   }
 }
-
-.light-theme {
-  @include carbon--theme($all1map--theme--light){
-    @include header-title-image();
+.light-theme{
+  .linechart {
+    #Home_line_1{
+      stroke: $all1map-yellow-60;
+    }
+    #Home_line_2{
+      stroke: $all1map-cyan-60;
+    }
+    #Home_line_3{
+      stroke: $all1map-pink-60;
+    }
   }
 }

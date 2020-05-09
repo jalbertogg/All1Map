@@ -1,5 +1,5 @@
 @import "carbon-components/scss/globals/scss/_typography.scss";
-@import "../../all1map-themes";
+@import "../../theme";
 
 @mixin article(){
   .bx--article-card-vertical .bx--tile{
@@ -65,19 +65,19 @@
 }
 
 .dark-theme {
-  @include carbon--theme($all1map--theme--dark){
+  @include carbon--theme($theme--dark){
     @include article();
     .bx--article-card-vertical .cover{
-      background-image: linear-gradient(to bottom,$all1map-purple-90,transparent);
+      background-image: linear-gradient(to bottom,$key-color-90,transparent);
     }
   }
 }
 
 .light-theme {
-  @include carbon--theme($all1map--theme--light){
+  @include carbon--theme($theme--light){
     @include article();
     .bx--article-card-vertical .cover{
-      background-image: linear-gradient(to bottom,$all1map-purple-80,transparent);
+      background-image: linear-gradient(to bottom,$key-color-80,transparent);
     }
   }
 }

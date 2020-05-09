@@ -4,8 +4,8 @@
   z-index: 7000;
   position: fixed !important;
   top: 0;
-  right: $spacing-04;
   text-align: center;
+  right: 0;
 
   .light-theme-icon, .dark-theme-icon{
     transition: all 0.3s ease-in;

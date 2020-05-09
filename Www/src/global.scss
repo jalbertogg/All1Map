@@ -1,26 +1,27 @@
-@import "./all1map-themes";
+@import "./theme";
 
 main {
   padding: 0 !important;
   margin-top: $layout-04;
+  overflow-x: hidden;//removes horizontal scroll on main content
 }
 
 //TOGGLE THEME
 .dark-theme main{
-  @include carbon--theme($all1map--theme--dark){
+  @include carbon--theme($theme--dark){
     background-color: $ui-background;
   }
   * {
-  @include carbon--theme($all1map--theme--dark, true);
+  @include carbon--theme($theme--dark, true);
   }
 }
 
 .light-theme main{
-  @include carbon--theme($all1map--theme--light){
+  @include carbon--theme($theme--light){
     background-color: $ui-background;
   }
   * {
-  @include carbon--theme($all1map--theme--light, true);
+  @include carbon--theme($theme--light, true);
   }
 }
 
@@ -31,5 +32,5 @@ main {
 
 //re-colour the header
 .bx--header{
-  background-color: $all1map-purple-80;
+  background-color: $key-color-80;
 }

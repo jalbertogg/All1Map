@@ -9,9 +9,9 @@ import Asleep20 from "@carbon/icons-react/lib/asleep/20";
 const ToggleTheme = (props) => {
 
   const classAsleepIcon =
-    (props.theme === 'light') ? 'dark-theme-icon off' : 'dark-theme-icon on';
+    (props.theme === 'light') ? 'dark-theme-icon on' : 'dark-theme-icon off';
   const classLightIcon =
-    (props.theme === 'light') ? 'light-theme-icon on' : 'light-theme-icon off';
+    (props.theme === 'light') ? 'light-theme-icon off' : 'light-theme-icon on';
 
   return(
       <HeaderGlobalAction

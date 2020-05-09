@@ -1,5 +1,5 @@
 @import "carbon-components/scss/globals/scss/_typography.scss";
-@import "../../all1map-themes";
+@import "../../theme";
 
 @mixin article(){
   .bx--article-card-horizontal .bx--tile{
@@ -64,28 +64,28 @@
 }
 
 .dark-theme {
-  @include carbon--theme($all1map--theme--dark){
+  @include carbon--theme($theme--dark){
     @include article();
     .bx--article-card-horizontal .cover{
       @include carbon--breakpoint("sm"){
-        background-image: linear-gradient($all1map-purple-90,transparent);
+        background-image: linear-gradient($key-color-90,transparent);
       }
       @include carbon--breakpoint("md"){
-        background-image: linear-gradient(to right,$all1map-purple-90,transparent);
+        background-image: linear-gradient(to right,$key-color-90,transparent);
       }
     }
   }
 }
 
 .light-theme {
-  @include carbon--theme($all1map--theme--light){
+  @include carbon--theme($theme--light){
     @include article();
     .bx--article-card-horizontal .cover{
       @include carbon--breakpoint("sm"){
-        background-image: linear-gradient($all1map-purple-80,transparent);
+        background-image: linear-gradient($key-color-80,transparent);
       }
       @include carbon--breakpoint("md"){
-        background-image: linear-gradient(to right,$all1map-purple-80,transparent);
+        background-image: linear-gradient(to right,$key-color-80,transparent);
       }
     }
   }

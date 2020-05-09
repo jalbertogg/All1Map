@@ -1,7 +1,7 @@
-@import "../../all1map-themes";
+@import "../../theme";
 
 .bx--side-nav__items .bx--header__menu-item {
-  @include carbon--theme($all1map--theme--light){
+  @include carbon--theme($theme--light){
     &.active{
       border: none;
       &::after{
@@ -24,9 +24,21 @@
 }
 
 .bx--header__menu-item.active{
-  @include carbon--theme($all1map--theme--dark){
+  @include carbon--theme($theme--dark){
     &::after {
       border-bottom-color: $interactive-04 !important;
+    }
+  }
+}
+
+.bx--header__menu-trigger, .bx--header__menu-bar .bx--header__action , .bx--header__menu-bar .bx--header__menu-item, .toggle-theme-btn{
+  @include carbon--theme($theme--dark){
+    color: $text-04 !important;
+    &:hover{
+      background-color: $key-color-70 !important;
+    }
+    &:active{
+      background-color: $active-primary !important;
     }
   }
 }
