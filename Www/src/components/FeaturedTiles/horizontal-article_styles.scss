@@ -68,10 +68,10 @@
     @include article();
     .bx--article-card-horizontal .cover{
       @include carbon--breakpoint("sm"){
-        background-image: linear-gradient($key-color-90,transparent);
+        background-image: linear-gradient($key-color-80,transparent);
       }
       @include carbon--breakpoint("md"){
-        background-image: linear-gradient(to right,$key-color-90,transparent);
+        background-image: linear-gradient(to right,$key-color-80,transparent);
       }
     }
   }

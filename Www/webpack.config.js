@@ -97,6 +97,20 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /browserconfig\.xml$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "browserconfig.xml",
+            },
+          },
+          {
+            loader: "web-app-browserconfig-loader",
+          },
+        ],
       }
     ]
   },
@@ -116,7 +130,8 @@ module.exports = {
      }),
      new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      favicon: './src/images/favicon/favicon.ico',
     }),
     new CleanWebpackPlugin()
   ],

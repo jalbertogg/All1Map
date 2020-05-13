@@ -21,14 +21,14 @@
 
   @include carbon--breakpoint("sm"){
     .header-text{
-      background-color: $key-color-80;
+      background-color: $key-color-70;
       padding-top: $layout-03;
     }
     .world_container{
       filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.5));
     }
     .world_globe{
-      background-color: $key-color-80;
+      background-color: $key-color-70;
       clip-path: url(#home-path-sm);
       img{
         height: 355px;
@@ -41,7 +41,7 @@
     }
     .banner{
       clip-path: url(#home-path-md);
-      background-color: $key-color-80;
+      background-color: $key-color-70;
       padding-bottom: $layout-03;
     }
     .world_container{
