@@ -55,3 +55,18 @@ $theme--light: map-merge(
     inverse-link: #CB91FD,
   )
 ) !default;
+
+:export {
+  keyColor100: $key-color-100;
+  keyColor90: $key-color-90;
+  keyColor80: $key-color-80;
+  keyColor70: $key-color-70;
+  keyColor60: $key-color-60;
+  keyColor50: $key-color-50;
+  keyColor45: $key-color-45;
+  keyColor40: $key-color-40;
+  keyColor30: $key-color-30;
+  keyColor20: $key-color-20;
+  keyColor10: $key-color-10;
+  keyColor0: $key-color-0;
+}

@@ -111,7 +111,12 @@ module.exports = {
             loader: "web-app-browserconfig-loader",
           },
         ],
-      }
+      },
+      {
+        test: /\.json/,
+        type: 'javascript/auto',
+        use: [{loader: "file-loader"}],
+      },
     ]
   },
   resolve: {

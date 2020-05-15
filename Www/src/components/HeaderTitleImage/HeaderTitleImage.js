@@ -14,7 +14,7 @@ const HeaderTitleImage = (props) => {
                 <h1 className='title'>{props.title}</h1>
                 <p className='subtitle'>{props.subtitle}</p>
               </div>
-              <div className='bx--col-sm-4 bx--col-md-5 bx--col-lg-8 bx--offset-xlg-1 bx--offset-max-2 world_globe'>
+              <div className='bx--col-sm-4 bx--col-md-3 bx--col-lg-5 bx--col-xlg-8 world_globe'>
                 <img className='image' src={props.imgSrc} alt={props.imgAlt} />
               </div>
             </div>

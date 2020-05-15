@@ -4,12 +4,9 @@ import ReactDOM from 'react-dom'
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root'
 import {Helmet} from "react-helmet";
-import { useTheme } from "./js/useTheme";
+import { useTheme } from "./hooks/useTheme";
 import { Content } from "carbon-components-react/es/components/UIShell";
 import GlobalHeader from './components/GlobalHeader'
-import Home from './pages/Home'
-import Theme from './pages/Theme'
-import Error from './pages/Error'
 import Favicon16 from './images/favicon/favicon-16.png'
 import Favicon32 from './images/favicon/favicon-32.png'
 import Favicon96 from './images/favicon/favicon-96.png'
@@ -20,6 +17,10 @@ import Favicon152 from './images/favicon/favicon-152.png'
 import Favicon180 from './images/favicon/favicon-180.png'
 import FaviconSVG from './images/favicon/faviconSVG.svg'
 import Browserconfig from './images/favicon/browserconfig.xml'
+import Home from './pages/Home'
+import Theme from './pages/Theme'
+import Error from './pages/Error'
+import Tests from './pages/Tests'
 
 const App = () => {
   const [theme, toggleTheme, componentMounted] = useTheme();
@@ -56,6 +57,7 @@ const App = () => {
       <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/theme" component={Theme} />
+          <Route path="/tests" component={Tests} />
           <Route component={Error} />
       </Switch>
     </Content>

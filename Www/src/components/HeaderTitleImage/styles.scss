@@ -30,8 +30,11 @@
     .world_globe{
       background-color: $key-color-70;
       clip-path: url(#home-path-sm);
+      padding-left: 0;
+      text-align: center;
       img{
         height: 355px;
+        margin-left: -90px;
       }
     }
   }
@@ -44,13 +47,19 @@
       background-color: $key-color-70;
       padding-bottom: $layout-03;
     }
+    .header-text{
+      background-color: transparent;
+    }
     .world_container{
       filter: none;
     }
     .world_globe{
       clip-path: none;
+      background-color: transparent;
+      padding-left: $layout-01;
       img{
         height: 355px;
+        margin-left: 0;
       }
     }
   }

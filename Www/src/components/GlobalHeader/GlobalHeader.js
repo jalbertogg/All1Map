@@ -74,6 +74,7 @@ const GlobalHeader = (props) => {
                     <HeaderMenuItem element={NavLink} to="/help">Help</HeaderMenuItem>
                     <HeaderMenuItem element={NavLink} to="/contact">Contact</HeaderMenuItem>
                     <HeaderMenuItem element={NavLink} to="/theme">Theme</HeaderMenuItem>
+                    <HeaderMenuItem element={NavLink} to="/tests">Tests</HeaderMenuItem>
                   </HeaderNavigation>
                   <SideNav
                     aria-label="Side navigation"
@@ -86,6 +87,7 @@ const GlobalHeader = (props) => {
                         <HeaderMenuItem element={NavLink} to="/help" onClick={hideSideNav}>Help</HeaderMenuItem>
                         <HeaderMenuItem element={NavLink} to="/contact" onClick={hideSideNav}>Contact</HeaderMenuItem>
                         <HeaderMenuItem element={NavLink} to="/theme" onClick={hideSideNav}>Theme</HeaderMenuItem>
+                        <HeaderMenuItem element={NavLink} to="/tests" onClick={hideSideNav}>Tests</HeaderMenuItem>
                       </HeaderSideNavItems>
                     </SideNavItems>
                   </SideNav>
