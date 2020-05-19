@@ -34,3 +34,8 @@ main {
 .bx--header{
   background-color: $key-color-70;
 }
+
+//hide @observablehq html inspector
+.observablehq{
+  visibility: hidden;
+}
