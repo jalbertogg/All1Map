@@ -4,7 +4,6 @@ import { hot } from 'react-hot-loader/root'
 import BigFooter from '../../components/BigFooter'
 import HeaderTitleImage from '../../components/HeaderTitleImage'
 import FeaturedTiles from '../../components/FeaturedTiles'
-import WorlGlobe from '../../images/world_globe'
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -15,8 +14,6 @@ const Home = () => {
       <HeaderTitleImage
         title='All1Map'
         subtitle='A catalog of useful tools to inspire, discover, and enjoy with real data visualisations and maps'
-        imgSrc={WorlGlobe}
-        imgAlt=' '
       />
       <FeaturedTiles
         align='horizontal'

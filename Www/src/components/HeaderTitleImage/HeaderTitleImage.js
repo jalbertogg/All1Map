@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader/root'
+import WorldGlobe3D from '../viz/WorldGlobe3D'
 import './styles'
 
 const HeaderTitleImage = (props) => {
@@ -15,7 +16,17 @@ const HeaderTitleImage = (props) => {
                 <p className='subtitle'>{props.subtitle}</p>
               </div>
               <div className='bx--col-sm-4 bx--col-md-3 bx--col-lg-5 bx--col-xlg-8 world_globe'>
-                <img className='image' src={props.imgSrc} alt={props.imgAlt} />
+                <WorldGlobe3D
+                  id="world-globe-3d"
+                  width={355}
+                  quality='LowFi'
+                  isMoving={true}
+                  speed={1}
+                  padding={10}
+                  pauseOnClick = {false}
+                  isDraggable = {true}
+                  position = {[0,-20,0]}
+                />
               </div>
             </div>
           </div>
@@ -48,8 +59,6 @@ const HeaderTitleImage = (props) => {
 HeaderTitleImage.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  imgSrc: PropTypes.string.isRequired,
-  imgAlt: PropTypes.string.isRequired
 }
 
 export default hot(HeaderTitleImage);

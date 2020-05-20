@@ -32,9 +32,9 @@
       clip-path: url(#home-path-sm);
       padding-left: 0;
       text-align: center;
-      img{
-        height: 355px;
+      canvas{
         margin-left: -90px;
+        width: 355px;
       }
     }
   }
@@ -52,13 +52,13 @@
     }
     .world_container{
       filter: none;
+      padding-bottom: $layout-05;
     }
     .world_globe{
       clip-path: none;
       background-color: transparent;
       padding-left: $layout-01;
-      img{
-        height: 355px;
+      canvas{
         margin-left: 0;
       }
     }
@@ -68,10 +68,8 @@
       clip-path: url(#home-path-lg);
       padding-bottom: $layout-06;
     }
-    .world_globe{
-      img{
-        height: 400px;
-      }
+    .world_container{
+      padding-bottom: $layout-07;
     }
   }
 
