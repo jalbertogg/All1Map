@@ -113,7 +113,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.json/,
+        test: /\.(json|tsv)/,
         type: 'javascript/auto',
         use: [{loader: "file-loader"}],
       },

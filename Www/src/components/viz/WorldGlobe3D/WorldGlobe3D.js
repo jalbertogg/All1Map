@@ -17,8 +17,7 @@ const WorldGlobe3D = (props) => {
     main.variable(observer()).define(["DOM","html","visibility"], async function*(DOM,html,visibility)
   {
     const topojson = require("topojson-client");
-    const d3geo = require("d3-geo");
-    const d3 = require("d3");
+    const d3 = Object.assign({}, require("d3"), require("d3-geo"));
     let dpi = window.devicePixelRatio;
     const width = props.width * dpi; //adjust size to device pixels to avoid blur image
     const height = width;
@@ -26,7 +25,7 @@ const WorldGlobe3D = (props) => {
     const sphere = {type: "Sphere"};
     const land110 = topojson.feature(await d3.json(LAND110m), "land");
     const land50 = topojson.feature(await d3.json(LAND50m), "land");
-    const projection = d3geo.geoOrthographic().fitExtent([[padding, padding], [width - padding, height - padding]], sphere);
+    const projection = d3.geoOrthographic().fitExtent([[padding, padding], [width - padding, height - padding]], sphere);
     var pause = false; //flag to no rotate while user interaction
     var dragged = false; //flag to start from same position on pause
     var current_rotation = props.position; //track world rotation and set initial position
@@ -73,7 +72,7 @@ const WorldGlobe3D = (props) => {
     canvas.width = width;
     canvas.height = height;
     var context = canvas.getContext("2d");
-    const path = d3geo.geoPath(projection, context);
+    const path = d3.geoPath(projection, context);
     const figure = d3.select(canvas);
 
     // Add gradient color with three color stops
