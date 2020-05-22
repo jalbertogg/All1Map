@@ -5,9 +5,8 @@ import {
   max,
   line,
   easeLinear,
-  easeQuadInOut,
+  easeElastic,
   active,
-  range
 } from 'd3'
 
 import {curveBasis} from 'd3-shape'
@@ -21,8 +20,7 @@ export default {
   line,
   curveBasis,
   easeLinear,
-  easeQuadInOut,
+  easeElastic,
   active,
-  randomInt,
-  range
+  randomInt
 };

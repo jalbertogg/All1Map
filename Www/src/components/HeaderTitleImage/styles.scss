@@ -3,19 +3,19 @@
 
 .header-title-image{
 
-  .linechart{
+  .linechart-container{
     z-index: -1;
     right: 0;
-    path{
-      fill: none;
-      stroke-width: 2;
-    }
     @include carbon--breakpoint("sm"){
       position: absolute;
       top: 200px;
+      width: 80%;
+      height: 330px;
     }
     @include carbon--breakpoint("md"){
       top: 0;
+      width: 50%;
+      height: 355px;
     }
   }
 
@@ -34,7 +34,7 @@
       text-align: center;
       canvas{
         margin-left: -90px;
-        width: 355px;
+        width: 300px;
       }
     }
   }
