@@ -16,7 +16,7 @@ const HeaderTitleImage = (props) => {
                 <h1 className='title'>{props.title}</h1>
                 <p className='subtitle'>{props.subtitle}</p>
               </div>
-              <div className='bx--col-sm-4 bx--col-md-3 bx--col-lg-5 bx--col-xlg-8 world_globe'>
+              <div className='bx--col-sm-4 bx--col-md-4 bx--col-lg-5 bx--col-xlg-7 world_globe'>
                 <WorldGlobe3D
                   id="world-globe-3d"
                   width={355}

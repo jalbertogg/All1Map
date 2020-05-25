@@ -19,8 +19,8 @@ const Home = () => {
         align='horizontal'
         articles= {[
           {
-            title: 'COVID-19',
-            subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            title: 'COVID-19: What was said vs pandemic evolution',
+            subtitle: 'Explore what was said on Twitter by the OMS and each country government at each time, comparing how was the state of the virus in the world with the actions taken',
             authorDate: 'Jose Alberto, May 2020',
             coverText: 'COVID-19',
             twitter: true,

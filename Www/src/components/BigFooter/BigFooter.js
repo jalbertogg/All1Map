@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader/root'
 import './styles'
+import Love20 from "@carbon/icons-react/lib/favorite--filled/20"
 
 const BigFooter = (props) => {
   return(
@@ -23,7 +24,7 @@ const BigFooter = (props) => {
           </div>
           <div className='bx--offset-lg-1 bx--col-sm-3 bx--col-md-4 bx--col-lg-4 footer-info'>
             <p>Have a comment or issue? <a href='#'>Contact me</a> or open an issue on <a href='#'>Github</a></p>
-            <p>All1Map has been ideated, designed and developed by <a href='#'>Jose Alberto García</a> Copyright ©2020</p>
+            <p>All1Map is made width <Love20 id="love-icon"/> by <a href='#'>Jose Alberto García</a> Copyright ©2020</p>
           </div>
         </div>
       </div>

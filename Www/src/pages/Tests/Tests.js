@@ -1,23 +1,17 @@
 import './styles'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
-import LineChartDemo from '../../components/viz/LineChartDemo'
-import WorldGlobe3D from '../../components/viz/WorldGlobe3D'
+import LineChart from '../../components/viz/LineChart'
 
 const Tests = () => {
   return (
-    <div className="test" >
-      <WorldGlobe3D
-        id="world-globe-3d"
-        width={355}
-        quality='HiFi'
-        isMoving={false}
-        speed={1}
-        padding={10}
-        pauseOnClick = {false}
-        isDraggable = {true}
-        position = {[0,-20,0]}
-      />
+    <div className="test bx--grid" >
+      <h4>Unemployment rate in the USA up to 2014</h4>
+      <div className="linechart-container">
+        <LineChart
+          id="linechart"
+        />
+      </div>
     </div>
   );
 }

@@ -32,9 +32,10 @@
       clip-path: url(#home-path-sm);
       padding-left: 0;
       text-align: center;
+      padding-bottom: $layout-03;
       canvas{
-        margin-left: -90px;
-        width: 300px;
+        margin-left: -100px;
+        width: 250px;
       }
     }
   }
@@ -58,8 +59,10 @@
       clip-path: none;
       background-color: transparent;
       padding-left: $layout-01;
+      padding-top: $spacing-06;
       canvas{
         margin-left: 0;
+        width: 300px;
       }
     }
   }
@@ -69,7 +72,7 @@
       padding-bottom: $layout-06;
     }
     .world_container{
-      padding-bottom: $layout-07;
+      padding-bottom: $layout-06;
     }
   }
 
